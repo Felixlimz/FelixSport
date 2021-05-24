@@ -35,12 +35,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        binding.favobut.setOnClickListener{
+        binding.favoButton.setOnClickListener{
             Log.e("SHOW ME", "LALALA")
             try {
                 startActivity(Intent(this, Class.forName("com.example.felixsport.favorite.FavoriteActivity")))
             } catch (e : Exception){
-                Toast.makeText(this, "Feature Not Available ${e.toString()}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Feature Not Available $e", Toast.LENGTH_SHORT).show()
                 Log.e("FAVORITE", e.toString())
             }
         }

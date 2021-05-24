@@ -1,13 +1,10 @@
 package com.example.felixsport.favorite
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.felixsport.core.data.Resources
 import com.example.felixsport.core.ui.ListAdapter
 import com.example.felixsport.favorite.databinding.ActivityFavoriteBinding
 import com.example.felixsport.presentation.detail.DetailActivity
@@ -39,11 +36,9 @@ class FavoriteActivity : AppCompatActivity() {
 
         favViewModel.items.observe(this, {
             favoriteBinding.progressBar.visibility = View.GONE
-            if(it.isNotEmpty()){
-                adapterList.setData(it)
-            } else {
-                favoriteBinding.emptylah.root.visibility = View.VISIBLE
-            }
+            adapterList.setData(it)
+            if(it.isNotEmpty()) favoriteBinding.emptyes.root.visibility = View.GONE
+            else favoriteBinding.emptyes.root.visibility = View.VISIBLE
         })
 
         with(favoriteBinding.rvItem){

@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        android:id="@+id/emptylah"
+        android:id="@+id/emptyes"
         layout="@layout/empty_page"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"

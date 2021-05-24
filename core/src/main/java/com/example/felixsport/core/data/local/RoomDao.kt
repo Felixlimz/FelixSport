@@ -1,7 +1,6 @@
 package com.example.felixsport.core.data.local
 
 import androidx.room.*
-import com.example.felixsport.core.data.network.SportsItem
 import kotlinx.coroutines.flow.Flow
 
 @Dao

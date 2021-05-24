@@ -1,4 +1,4 @@
-package com.example.felixsport.di
+package com.example.felixsport.core.di
 
 import androidx.room.Room
 import com.example.felixsport.core.data.DataRepository
