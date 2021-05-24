@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity() {
             try {
                 startActivity(Intent(this, Class.forName("com.example.felixsport.favorite.FavoriteActivity")))
             } catch (e : Exception){
-                Toast.makeText(this, "Feature Not Available", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Feature Not Available ${e.toString()}", Toast.LENGTH_SHORT).show()
+                Log.e("FAVORITE", e.toString())
             }
         }
 
@@ -65,6 +66,5 @@ class MainActivity : AppCompatActivity() {
             setHasFixedSize(true)
             adapter = adapterList
         }
-
     }
 }

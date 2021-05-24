@@ -39,11 +39,10 @@ class FavoriteActivity : AppCompatActivity() {
 
         favViewModel.items.observe(this, {
             favoriteBinding.progressBar.visibility = View.GONE
-            Log.e("MASUK", it.toString())
-            if(it != null){
+            if(it.isNotEmpty()){
                 adapterList.setData(it)
             } else {
-                Toast.makeText(this, "No Favorite Item", Toast.LENGTH_SHORT).show()
+                favoriteBinding.emptylah.root.visibility = View.VISIBLE
             }
         })
 
