@@ -38,6 +38,11 @@ android {
         viewBinding = true
     }
     dynamicFeatures = [':favorite']
+
+    lintOptions {
+        disable 'InvalidPackage'
+        checkReleaseBuilds false //<- add this line
+    }
 }
 
 dependencies {
