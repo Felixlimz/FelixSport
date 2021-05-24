@@ -1,12 +1,11 @@
 package com.example.felixsport.presentation.main
 
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.felixsport.R
 import com.example.felixsport.core.data.Resources
@@ -14,7 +13,6 @@ import com.example.felixsport.core.ui.ListAdapter
 import com.example.felixsport.databinding.ActivityMainBinding
 import com.example.felixsport.presentation.detail.DetailActivity
 import org.koin.android.viewmodel.ext.android.viewModel
-import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
