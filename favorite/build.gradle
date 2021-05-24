@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.dynamic-feature'
     id 'kotlin-android'
-    id 'kotlin-parcelize'
     id 'kotlin-kapt'
 }
 apply from: '../shared_dep.gradle'
@@ -23,7 +22,6 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            //proguardFiles 'proguard-rules.pro'
         }
     }
 
@@ -37,11 +35,6 @@ android {
 
     buildFeatures {
         viewBinding = true
-    }
-
-    lintOptions {
-        disable 'InvalidPackage'
-        checkReleaseBuilds false //<- add this line
     }
 }
 

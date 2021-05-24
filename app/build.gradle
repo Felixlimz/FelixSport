@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'kotlin-parcelize'
 }
 apply from: '../shared_dep.gradle'
 
@@ -22,8 +21,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -38,11 +37,6 @@ android {
         viewBinding = true
     }
     dynamicFeatures = [':favorite']
-
-    lintOptions {
-        disable 'InvalidPackage'
-        checkReleaseBuilds false //<- add this line
-    }
 }
 
 dependencies {
